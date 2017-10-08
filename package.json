@@ -1,0 +1,29 @@
+{
+  "name": "smartdesk-alexa",
+  "version": "1.0.0",
+  "description": "> SmartDesk - A smarter more intuitive desk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ATR-Lab/smartdesk-alexa.git"
+  },
+  "keywords": [
+    "Smart",
+    "Office",
+    "IoT",
+    "AI"
+  ],
+  "author": "Irvin Steve Cardenas",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ATR-Lab/smartdesk-alexa/issues"
+  },
+  "homepage": "https://github.com/ATR-Lab/smartdesk-alexa#readme",
+  "devDependencies": {
+    "alexa-sdk": "^1.0.14",
+    "firebase": "^4.5.0"
+  }
+}
