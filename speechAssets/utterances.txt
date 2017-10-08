@@ -1,0 +1,85 @@
+DeskConfigIntent Configure my desk
+DeskConfigIntent Can you configure my desk
+DeskConfigIntent Make my desk ergonomic
+DeskConfigIntent Make my desk more ergonomic
+DeskConfigIntent Can you please configure my desk
+DeskConfigIntent What's the best height for my desk
+DeskConfigIntent How tall should my desk be
+DeskConfigIntent Adjust my desk to my height
+DeskConfigIntent Adjust my desk
+DeskConfigIntent Auto adjust my desk
+
+GetHeightIntent I am {feetHeight} feet and {inchesHeight} inches
+GetHeightIntent I'm {feetHeight} feet and {inchesHeight} inches
+GetHeightIntent {feetHeight} inches and {inchesHeight} inches
+GetHeightIntent I'm {feetHeight} feet
+GetHeightIntent My height is {feetHeight} and {inchesHeight} inches
+
+DeskRaiseIntent Raise my desk
+DeskRaiseIntent Raise my desk up {DescriptiveHeightSmall}
+DeskRaiseIntent Bring up my desk up {DescriptiveHeightSmall}
+DeskRaiseIntent Increase the height of my desk {DescriptiveHeightSmall}
+DeskRaiseIntent Make my desk {DescriptiveHeightSmall}
+
+DeskRaiseIntent Raise my desk {DescriptiveHeightLarge}
+DeskRaiseIntent Bring up my desk {DescriptiveHeightLarge}
+DeskRaiseIntent Increase the height of my desk {DescriptiveHeightLarge}
+DeskRaiseIntent Make my desk {DescriptiveHeightLarge}
+
+DeskRaiseIntent Raise my desk {TopHeight}
+DeskRaiseIntent Bring up my desk {TopHeight}
+DeskRaiseIntent Increase the height of my desk {TopHeight}
+DeskRaiseIntent Make my desk {TopHeight}
+DeskRaiseIntent Set desk height {TopHeight}
+DeskRaiseIntent Set height of desk {TopHeight}
+
+DeskLowerIntent Lower my desk
+DeskLowerIntent Lower my desk {DescriptiveHeightSmall}
+DeskLowerIntent Bring my desk down {DescriptiveHeightSmall}
+DeskLowerIntent Decrease the height of my desk {DescriptiveHeightSmall}
+DeskLowerIntent Make my desk {DescriptiveHeightSmall} smaller
+
+DeskLowerIntent Lower my desk {DescriptiveHeightLarge}
+DeskLowerIntent Bring down my desk {DescriptiveHeightLarge}
+DeskLowerIntent Decrease the height of my desk {DescriptiveHeightLarge}
+DeskLowerIntent Make my desk {DescriptiveHeightLarge} smaller
+
+DeskLowerIntent Lower my desk {BottomHeight}
+DeskLowerIntent Bring down my desk {BottomHeight}
+DeskLowerIntent Decrease the height of my desk {BottomHeight}
+DeskLowerIntent Make my desk {BottomHeight} smaller
+DeskLowerIntent Set desk height {BottomHeight}
+DeskLowerIntent Set height of desk {BottomHeight}
+
+DeskSetMidHeightIntent Raise my desk {MidHeight} way
+DeskSetMidHeightIntent Raise my desk to the {MidHeight}
+DeskSetMidHeightIntent Raise my desk right to the {MidHeight}
+DeskSetMidHeightIntent Increase my desk {MidHeight}
+DeskSetMidHeightIntent Increase the height of my desk {MidHeight}
+DeskSetMidHeightIntent Bring up my desk {MidHeight}
+DeskSetMidHeightIntent Make my desk {MidHeight} smaller
+DeskSetMidHeightIntent Make my desk smaller {MidHeight}
+DeskSetMidHeightIntent Lower my desk {MidHeight}
+DeskSetMidHeightIntent Bring down my desk {MidHeight}
+DeskSetMidHeightIntent Decrease the height of my desk {MidHeight}
+DeskSetMidHeightIntent Make my desk {MidHeight} smaller
+DeskSetMidHeightIntent Make desk {MidHeight}
+DeskSetMidHeightIntent Set desk height {MidHeight}
+DeskSetMidHeightIntent Set height of desk {MidHeight}
+
+DeskSetMidHeightIntent Increase the height of my desk by a {foot|descriptiveHeight}
+DeskSetMidHeightIntent Increase the height {half|descriptiveHeight} way
+DeskSetMidHeightIntent Increase the height of my desk to the {middle|descriptiveHeight}
+DeskSetMidHeightIntent Increase the height of my desk {mid way|descriptiveHeight}
+DeskSetMidHeightIntent Increase the height of my desk to the {lower half|descriptiveHeight}
+DeskSetMidHeightIntent Increase the height of my desk to the {upper hafl|descriptiveHeight}
+DeskSetMidHeightIntent Increase the height of my desk a {bit|descriptiveHeight}
+
+RaiseDeskIntent Raise my desk by {numericHeight} {inch|metricUnits}
+RaiseDeskIntent Raise my desk by {numericHeight} {foot|metricUnits}
+RaiseDeskIntent Bring up my desk
+
+RaiseDeskIntent Increase the height of my desk
+
+RaiseDeskIntent Make my desk taller
+RaiseDeskIntent Make my desk taller by {numericHeight} {feet|metricUnits}

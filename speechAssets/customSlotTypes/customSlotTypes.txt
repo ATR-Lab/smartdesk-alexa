@@ -1,0 +1,60 @@
+DescriptiveHeightSmall
+LIST_OF_DESCRIPTIVE_HEIGHT_SMALL
+a bit
+just a bit
+small amount
+tiny bit
+a little bit
+just an inch
+
+DescriptiveHeightLarge
+LIST_OF_DESCRIPTIVE_HEIGHT_LARGE
+by a lot 
+taller
+a couple of inches
+
+TopHeight
+LIST_OF_TOP_HEIGHT
+to the top
+top
+to the highest setting
+to the highest
+really high
+high
+really tall
+super tall
+tall
+
+
+BottomHeight
+LIST_OF_BOTTOM_HEIGHT
+to the bottom
+bottom
+lowest
+to the lowest setting
+to the lowest
+really small
+super small
+small
+short
+super short
+really short
+short
+
+MidHeight
+LIST_OF_MID_HEIGHT
+mid way
+mid
+to the middle
+in the middle
+right in the middle
+half way
+by half
+half
+in between
+
+
+BottomHeight
+to the bottom
+to the lowest
+bottom
