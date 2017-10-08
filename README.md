@@ -50,10 +50,9 @@ STEP 5: Create a lambda function where the JS code will be executed
 https://console.aws.amazon.com/lambda
 
 STEP 6: Zip the following files
-- node_modules folder
-- index.js
-- config.js
-- smartdesk-service.json
+- node_modules/ folder
+- package.json
+- src/ folder
 
 STEP 7: Upload the zipped file into Lambda
 ```
