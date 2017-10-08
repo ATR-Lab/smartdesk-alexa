@@ -62,12 +62,12 @@ STEP 7: Upload the zipped file into Lambda
 
 ### Overview
 
-> We say that every appliance within a smart environment has a state, and can execute action which change the environment.
-> For example, smart-office lights can be a the state of ```ON``` or ```OFF```. 
-> And user can request the lights to be dimmed to a brightness of 50% - hence the lights are executing a quantitative action, which changes the environment by making it darker. 
+> We say that every appliance within a smart environment has a state, and can execute actions which in turn change the environment.
+> For example, smart-office lights can be in a state of ```ON``` or ```OFF```. 
+> And a user can request the lights to be dimmed to a brightness of 50% - hence the lights are executing a quantitative action, which changes the environment by making it darker/less bright. 
 
-> The time it takes for the appliances to process such actions depends on the state of the appliances or it's functional requirements. For example, the user might request to the lights to be dimmed slowly. Hence, the execution of the action, on it's own, can vary. Each appliance can therefore provide us with a status of the requested action. An appliance can start to  ```EXECUTE``` an action, be ```EXECUTING``` an action, or have ```COMPLETED``` an action.
+> The time it takes for the appliance to process such actions depends on the state of the appliance or it's functional requirements. For example, the user might request that the lights be dimmed slowly. Hence, the execution of the action, on it's own, can vary. Each appliance can therefore provide the system (or us) with a status of the requested action. An appliance can start to  ```EXECUTE``` an action, be ```EXECUTING``` an action, or have ```COMPLETED``` an action.
 
-> Together, these appliances encompass a smart environment, in this case a smart office. As an entity, the smart office can orchestrate various actions requested by the user. For example, the user can request for the office to be turned on - signifying that all the appliances should be turned on or atleast returned to a known or pre-configured state. The latter could mean, opening window curtains, turning on the AC to 70 degrees Fahrenheit, and perhaps readjusting the desk to a height suitable enough to sit and have breakfast on.
+> Together, these appliances encompass a smart environment, in this case a smart office. As an entity, the smart office can orchestrate various actions requested by the user. For example, the user can request for the office to be turned ```ON``` - signifying that all the appliances should be turned on or atleast returned to a known or pre-configured state. The latter could mean, opening window curtains, turning on the AC to 70 degrees Fahrenheit, and perhaps readjusting the desk to a height suitable enough to sit and have breakfast on.
 
 > With the latter comments in mind, the smart environment can be thought of as a distributed entity that communicates through a messaging service. Like in most distributed systems or [peer-to-peer](https://en.wikipedia.org/wiki/Peer-to-peer) applications, we implement what is known as a [heartbeat](https://en.wikipedia.org/wiki/Heartbeat_(computing)). The use of a heartbeat allows us to check wether an appliance is still functioning as expected (that it's heart still beating and is not dead).
