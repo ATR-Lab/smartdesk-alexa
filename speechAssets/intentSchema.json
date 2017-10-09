@@ -1,0 +1,78 @@
+{
+  "intents": [
+    {
+      "intent": "DeskConfigIntent"
+    },
+    {
+      "intent": "GetHeightIntent",
+      "slots": [
+        {
+          "name": "feetHeight",
+          "type": "AMAZON.NUMBER"
+        },
+        {
+          "name": "inchesHeight",
+          "type": "AMAZON.NUMBER"
+        }
+      ]
+    },
+    {
+      "intent": "DeskRaiseIntent",
+      "slots": [
+        {
+          "name": "DescriptiveHeightLarge",
+          "type": "LIST_OF_DESCRIPTIVE_HEIGHT_LARGE"
+        },
+        {
+          "name": "DescriptiveHeightSmall",
+          "type": "LIST_OF_DESCRIPTIVE_HEIGHT_SMALL"
+        },
+        {
+          "name": "TopHeight",
+          "type": "LIST_OF_TOP_HEIGHT"
+        }
+      ]
+    },
+    {
+      "intent": "DeskLowerIntent",
+      "slots": [
+        {
+          "name": "DescriptiveHeightLarge",
+          "type": "LIST_OF_DESCRIPTIVE_HEIGHT_LARGE"
+        },
+        {
+          "name": "DescriptiveHeightSmall",
+          "type": "LIST_OF_DESCRIPTIVE_HEIGHT_SMALL"
+        },
+        {
+          "name": "BottomHeight",
+          "type": "LIST_OF_BOTTOM_HEIGHT"
+        }
+      ]
+    },
+    {
+      "intent": "DeskSetMidHeightIntent",
+      "slots": [
+        {
+          "name": "MidHeight",
+          "type": "LIST_OF_MID_HEIGHT"
+        }
+      ]
+    },
+    {
+      "intent": "AMAZON.YesIntent"
+    },
+    {
+      "intent": "AMAZON.NoIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    }
+  ]
+}

@@ -1,3 +1,13 @@
+#################
+# Development
+#################
+/config.js
+/smartdesk-service.json
+
+#################
+# Node Specific
+#################
+
 # Logs
 logs
 *.log
