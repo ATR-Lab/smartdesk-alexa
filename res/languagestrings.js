@@ -26,6 +26,7 @@ const languagestrings = {
             DESK_DECREASING_HEIGHT_SMALL_MESSAGE: 'Lowering your desk just a bit. %s',
             DESK_BOTTOM_HEIGHT_MESSAGE: 'Lowering your desk to its lowest height. %s',
             DESK_ALREADY_BOTTOM_HEIGHT_MESSAGE: 'Your desk is already at bottom height %s',
+            DESK_LAMP_ON_OFF: 'Turning %s your desk lamp. %s',
             SOMETHING_WENT_WRONG_MESSAGE: 'Oops. Something went wrong. Lets try that again.'
         }
     }
