@@ -195,6 +195,21 @@ var startSessionHandlers = Alexa.CreateStateHandler(states.STARTMODE, {
             }
         }
     },
+    'DeskLampOnOffIntent': function() {
+        if(this.event.request.intent.slots.DeskLampState.value) {
+            var command = this.event.request.intent.slots.DeskLampState.value.toUpperCase()
+            var value = (command === 'ON') ? 'HIGH': 'LOW';
+            firebase.database().ref('deskLamp').child('action').update({
+                command:    command, 
+                status:     'EXECUTE', 
+                type:       'ORDINAL',
+                value:      value
+            }).then(
+                ()      => { this.emit(':ask', this.t('DESK_LAMP_ON_OFF', command, this.t('REQUEST_REPROMPT'))); },
+                (err)   => { this.emit(':tell', lexa.t('SOMETHING_WENT_WRONG_MESSAGE')); }
+            );
+        }
+    },
     'AMAZON.NoIntent': function() {
         this.emit(':tell', this.t('GOODBYE_MESSAGE'));
     },
