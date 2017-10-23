@@ -23,13 +23,6 @@ const states = {
     CALENDARMODE:   '_CALENDARMODE'
 }
 
-var welcomeMessage          = "What's up. Welcome to your smart office. How can I help you?";
-var sayThatAgain            = "Please say that again?";
-var helpMessage             = "I can automate various things in your office";
-var goodbyeMessage          = "Ok, see you next time!";
-var promptToStartMessage    = "Say continue, to continue or end.";
-var deskConfigPrompt        = 'Lets configure your desk. What your height is in feet and inches?';
-
 exports.handler = function(event, context, callback) {
     const alexa        = Alexa.handler(event, context);
     alexa.appId        = config.alexa.id;
@@ -51,17 +44,17 @@ var newSessionHandlers = {
         
     },
     'AMAZON.StopIntent': function() {
-        this.emit(':tell', goodbyeMessage);
+        this.emit(':tell', this.t('GOODBYE_MESSAGE'));
     },
     'AMAZON.CancelIntent': function() {
-        this.emit(':tell', goodbyeMessage);
+        this.emit(':tell', this.t('GOODBYE_MESSAGE'));
     },
     'AMAZON.HelpIntent': function() {
         this.emit(':ask', this.t('HELP_MESSAGE'), this.t('HELP_REPROMPT'));
     },
     'SessionEndedRequest': function() {
         console.log('session ended!');
-        this.emit(':tell', goodbyeMessage);
+        this.emit(':tell', this.t('GOODBYE_MESSAGE'));
     },
     'Unhandled': function() {
         this.emit(':ask', this.t('HELP_MESSAGE'), this.t('HELP_REPROMPT'));
