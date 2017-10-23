@@ -184,10 +184,10 @@ var startSessionHandlers = Alexa.CreateStateHandler(states.STARTMODE, {
             } else {
                 this.attributes['deskHeightState'] = 'MIDDLE';
                 firebase.database().ref('desk').child('action').update({
-                    command:    'MIDDLE', 
+                    command:    'RAISE', 
                     status:     'EXECUTE', 
                     type:       'ORDINAL',
-                    value:      'LARGE'
+                    value:      'MIDDLE'
                 }).then(
                     ()      => { this.emit(':ask', this.t('DESK_MID_HEIGHT_MESSAGE', this.t('REQUEST_REPROMPT'))); },
                     (err)   => { this.emit(':tell', lexa.t('SOMETHING_WENT_WRONG_MESSAGE')); }
