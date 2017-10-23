@@ -6,46 +6,13 @@
 // https://github.com/alexa/skill-sample-nodejs-fact/blob/master/src/index.js
 
 'use strict';
-const config          = require('./config')
 const firebase        = require('firebase');
 const Alexa           = require('alexa-sdk');
-const languagestrings = require('./languagestrings')
+const config          = require('./src/config')
+const languagestrings = require('./src/languagestrings')
 
 firebase.initializeApp(config.firebase.service);
 const defaultDatabase = firebase.database();
-
-const languageStrings = {
-    'en-US': {
-        translation: {
-            SKILL_NAME: 'SmartDesk',
-            WELCOME_MESSAGE: 'Hi! Welcome to your Smart Office. How can I help you?',
-            WELCOME_REPROMPT: 'For instructions on what to say, please say help me.',
-            HELP_MESSAGE: 'You can ask me to do things like, dim the office lights, lower the height of the desk, show your calendar appointments or you can just say exit... Now, what can I help you with?',
-            HELP_REPROMPT: 'You can say things like, dim the office lights, lower the height of the desk, show your calendar appointments or you can just say exit... Now, what can I help you with?',
-            STOP_MESSAGE: 'Goodbye!',
-            GOODBYE_MESSAGE: 'Ok, talk to you later!',
-            REPEAT_MESSAGE: 'Can you say that again?',
-            REQUEST_REPROMPT: 'Is there anything else I can do?',
-            EXECUTING_TASK: 'Consider it done!',
-            DESK_CONFIG_PROMPT: 'Lets configure your desk. What is your height in feet and inches?',
-            DESK_CONFIG_REPROMPT: 'Sorry. Can you tell me again your height in feet and inches?',
-            VERIFY_HEIGHT_FEET_INCHES: 'You said %s feet and %s inches. Correct?',
-            VERIFY_HEIGHT_FEET: 'You said %s feet tall. Correct?',
-            DESK_CONFIG_COMPLETE_PROMPT: 'According to your height. The ideal desk height is %s inches. I will go ahead and adjust the height. Is there anything else I can do for you?',
-            DESK_INCREASING_HEIGHT_MESSAGE: 'Making your desk taller. %s',
-            DESK_INCREASING_HEIGHT_SMALL_MESSAGE: 'Increasing the height just a bit. %s',
-            DESK_TOP_HEIGHT_MESSAGE: 'Raising your desk to the top height. %s',
-            DESK_ALREADY_TOP_HEIGHT_MESSAGE: 'Your desk is already at its highest. %s',
-            DESK_MID_HEIGHT_MESSAGE: 'Setting your desk to mid height. %s',
-            DESK_ALREADY_MID_HEIGHT_MESSAGE: 'Your desk is already at mid height. $s',
-            DESK_DECREASING_HEIGHT_MESSAGE: 'Making your desk shorter. %s',
-            DESK_DECREASING_HEIGHT_SMALL_MESSAGE: 'Lowering your desk just a bit. %s',
-            DESK_BOTTOM_HEIGHT_MESSAGE: 'Lowering your desk to its lowest height. %s',
-            DESK_ALREADY_BOTTOM_HEIGHT_MESSAGE: 'Your desk is already at bottom height %s',
-            SOMETHING_WENT_WRONG_MESSAGE: 'Oops. Something went wrong. Lets try that again.'
-        }
-    }
-};
 
 const states = {
     STARTMODE:      '_STARTMODE',
@@ -66,7 +33,7 @@ var deskConfigPrompt        = 'Lets configure your desk. What your height is in 
 exports.handler = function(event, context, callback) {
     const alexa        = Alexa.handler(event, context);
     alexa.appId        = config.alexa.id;
-    alexa.resources    = languageStrings;   // Add international resources
+    alexa.resources    = languagestrings;   // Add international resources
     alexa.registerHandlers(newSessionHandlers, startSessionHandlers, deskConfigHandlers);
     alexa.execute();
 }
@@ -76,9 +43,12 @@ var newSessionHandlers = {
         if(Object.keys(this.attributes).length === 0) {
             this.attributes['endedSessionCount'] = 0;
             this.attributes['deskHeightState'] = '';
+            this.handler.state = states.STARTMODE;
+            this.emit(':ask', this.t('WELCOME_MESSAGE'), 'Say that again?');
+        } else {
+            this.emit(':ask', this.t('What\'s up?'), 'Please say that againg?');
         }
-        this.handler.state = states.STARTMODE;
-        this.emit(':ask', this.t('WELCOME_MESSAGE'));
+        
     },
     'AMAZON.StopIntent': function() {
         this.emit(':tell', goodbyeMessage);
@@ -140,7 +110,7 @@ var startSessionHandlers = Alexa.CreateStateHandler(states.STARTMODE, {
                 firebase.database().ref('desk').child('action').update({
                     command:    'RAISE', 
                     status:     'EXECUTE', 
-                    type:       'QUALITATIVE',
+                    type:       'ORDINAL',
                     value:      'TOP'
                 }).then(
                     ()      => { this.emit(':ask', this.t('DESK_TOP_HEIGHT_MESSAGE', this.t('REQUEST_REPROMPT'))); },
@@ -193,7 +163,7 @@ var startSessionHandlers = Alexa.CreateStateHandler(states.STARTMODE, {
                 firebase.database().ref('desk').child('action').update({
                     command:    'LOWER', 
                     status:     'EXECUTE', 
-                    type:       'QUALITATIVE',
+                    type:       'ORDINAL',
                     value:      'BOTTOM'
                 }).then(
                     ()      => { this.emit(':ask', this.t('DESK_BOTTOM_HEIGHT_MESSAGE', this.t('REQUEST_REPROMPT'))); },
@@ -223,7 +193,7 @@ var startSessionHandlers = Alexa.CreateStateHandler(states.STARTMODE, {
                 firebase.database().ref('desk').child('action').update({
                     command:    'MIDDLE', 
                     status:     'EXECUTE', 
-                    type:       'QUALITATIVE',
+                    type:       'ORDINAL',
                     value:      'LARGE'
                 }).then(
                     ()      => { this.emit(':ask', this.t('DESK_MID_HEIGHT_MESSAGE', this.t('REQUEST_REPROMPT'))); },
