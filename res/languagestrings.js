@@ -1,4 +1,4 @@
-const languageStrings = {
+const languagestrings = {
     'en-US': {
         translation: {
             SKILL_NAME: 'SmartDesk',
@@ -31,4 +31,4 @@ const languageStrings = {
     }
 };
 
-module.exports = languageStrings;
+module.exports = languagestrings;

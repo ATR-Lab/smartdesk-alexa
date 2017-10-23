@@ -8,8 +8,8 @@
 'use strict';
 const firebase        = require('firebase');
 const Alexa           = require('alexa-sdk');
-const config          = require('./src/config')
-const languagestrings = require('./src/languagestrings')
+const config          = require('./res/config')
+const languagestrings = require('./res/languagestrings')
 
 firebase.initializeApp(config.firebase.service);
 const defaultDatabase = firebase.database();

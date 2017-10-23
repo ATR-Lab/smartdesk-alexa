@@ -1,4 +1,4 @@
-var config = {}
+const config = {}
 
 config.alexa = {
 	id: 	"amzn1.ask.skill.e1c3ca0f-04cd-4598-a93f-df0a1ab8add5"
@@ -19,3 +19,5 @@ config.firebase.service = {
     databaseURL			: 'https://smartdesk-5705d.firebaseio.com',
     serviceAccount		: './smartdesk-service.json'
 };
+
+module.exports = config
