@@ -1,6 +1,6 @@
 {
-  "desk" : {
-    "action" : {
+  "desk": {
+    "action": {
     	"command": "LOWER",
     	"status": "COMPLETED",
     	"type": "QUALITATIVE",
@@ -9,6 +9,15 @@
     "currentHeight": 115,
     "heartBeat": "2017-10-06T20:15:14.979Z",
     "previousHeight": 74,
+    "state": "OFF"
+  },
+  "deskLamp": {
+    "action": {
+        "command": "ON",
+        "status": "EXECUTE",
+        "type": "ORDINAL",
+        "value": "HIGH"
+    },
     "state": "OFF"
   }
 }
