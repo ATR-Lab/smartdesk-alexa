@@ -53,8 +53,13 @@ by half
 half
 in between
 
-
 BottomHeight
+LIST_OF_BOTTOM_HEIGHT
 to the bottom
 to the lowest
 bottom
+
+DeskLampState
+LIST_OF_DESK_LAMP_STATES
+on
+off

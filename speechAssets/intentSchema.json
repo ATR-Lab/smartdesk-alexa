@@ -60,6 +60,15 @@
       ]
     },
     {
+      "intent": "DeskLampOnOffIntent",
+      "slots": [
+        {
+          "name": "DeskLampState",
+          "type": "LIST_OF_DESK_LAMP_STATES"
+        }
+      ]
+    },
+    {
       "intent": "AMAZON.YesIntent"
     },
     {

@@ -67,6 +67,17 @@ DeskSetMidHeightIntent Make desk {MidHeight}
 DeskSetMidHeightIntent Set desk height {MidHeight}
 DeskSetMidHeightIntent Set height of desk {MidHeight}
 
+DeskLampOnOffIntent Turn {DeskLampState} my desk lamp
+DeskLampOnOffIntent Turn {DeskLampState} desk lamp
+DeskLampOnOffIntent Turn {DeskLampState} my desk light
+DeskLampOnOffIntent Turn {DeskLampState} desk light
+DeskLampOnOffIntent Desk lamp {DeskLampState}
+DeskLampOnOffIntent Desk light {DeskLampState}
+DeskLampOnOffIntent Turn my desk lamp {DeskLampState}
+DeskLampOnOffIntent Turn my desk light {DeskLampState}
+
+
+
 DeskSetMidHeightIntent Increase the height of my desk by a {foot|descriptiveHeight}
 DeskSetMidHeightIntent Increase the height {half|descriptiveHeight} way
 DeskSetMidHeightIntent Increase the height of my desk to the {middle|descriptiveHeight}
