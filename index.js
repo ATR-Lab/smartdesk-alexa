@@ -116,7 +116,7 @@ var startSessionHandlers = Alexa.CreateStateHandler(states.STARTMODE, {
                 command:    'RAISE', 
                 status:     'EXECUTE', 
                 type:       'QUALITATIVE',
-                value:      'LARGE'
+                value:      'SMALL'
             }).then(
                 ()      => { this.emit(':ask', this.t('DESK_INCREASING_HEIGHT_SMALL_MESSAGE', this.t('REQUEST_REPROMPT'))); },
                 (err)   => { this.emit(':tell', lexa.t('SOMETHING_WENT_WRONG_MESSAGE')); }
@@ -170,7 +170,7 @@ var startSessionHandlers = Alexa.CreateStateHandler(states.STARTMODE, {
                     command:    'LOWER', 
                     status:     'EXECUTE', 
                     type:       'QUALITATIVE',
-                    value:      'LARGE'
+                    value:      'SMALL'
             }).then(
                     ()      => { this.emit(':ask', this.t('DESK_DECREASING_HEIGHT_SMALL_MESSAGE', this.t('REQUEST_REPROMPT'))); },
                     (err)   => { this.emit(':tell', lexa.t('SOMETHING_WENT_WRONG_MESSAGE')); }

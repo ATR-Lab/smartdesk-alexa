@@ -38,13 +38,17 @@ DeskLowerIntent Lower my desk {DescriptiveHeightSmall}
 DeskLowerIntent Bring my desk down {DescriptiveHeightSmall}
 DeskLowerIntent Decrease the height of my desk {DescriptiveHeightSmall}
 DeskLowerIntent Make my desk {DescriptiveHeightSmall} smaller
+DeskLowerIntent Put down my desk
+DeskLowerIntent Put down my desk {DescriptiveHeightSmall}
 
 DeskLowerIntent Lower my desk {DescriptiveHeightLarge}
 DeskLowerIntent Bring down my desk {DescriptiveHeightLarge}
 DeskLowerIntent Decrease the height of my desk {DescriptiveHeightLarge}
 DeskLowerIntent Make my desk {DescriptiveHeightLarge} smaller
+DeskLowerIntent Put down my desk {DescriptiveHeightLarge}
 
 DeskLowerIntent Lower my desk {BottomHeight}
+DeskLowerIntent Bring down my desk
 DeskLowerIntent Bring down my desk {BottomHeight}
 DeskLowerIntent Decrease the height of my desk {BottomHeight}
 DeskLowerIntent Make my desk {BottomHeight} smaller
